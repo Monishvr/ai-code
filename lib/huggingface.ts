@@ -24,7 +24,7 @@ export class HuggingFaceService {
 
     const languageMap = {
       english: "English",
-      bengali: "Bengali",
+      kannada: "kannada",
     };
 
     return `As a programming expert, explain this code in ${
@@ -105,7 +105,7 @@ Make it educational and easy to understand.`;
   private getFallbackExplanation(request: ExplanationRequest): string {
     const { code, language, explanationStyle } = request;
 
-    const languageText = language === "bengali" ? "বাংলা" : "English";
+    const languageText = language === "kannada" ? "ಕನ್ನಡ" : "English";
     const styleText =
       explanationStyle === "beginner" ? "simple" : explanationStyle;
 

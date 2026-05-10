@@ -30,12 +30,23 @@ export default function NotFound() {
           <p>
             Built with ❤️ by{" "}
             <a
-              href="https://shihablabs.vercel.app/"
+              href="https://monishlabs.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
-              Shihab Labs
+              Monish Labs
+            </a>
+            {" "}
+            •
+            {" "}
+            <a
+              href="https://github.com/Monishvr/ai-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              GitHub
             </a>
           </p>
         </div>

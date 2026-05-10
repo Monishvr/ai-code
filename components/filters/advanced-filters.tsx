@@ -43,7 +43,7 @@ export function AdvancedFilters({
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="english">English</SelectItem>
-              <SelectItem value="bengali">Bengali</SelectItem>
+              <SelectItem value="kannada">kannada</SelectItem>
             </SelectContent>
           </Select>
           <p className="text-xs text-muted-foreground">Explanation language</p>

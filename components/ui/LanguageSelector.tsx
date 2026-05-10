@@ -14,7 +14,7 @@ export default function LanguageSelector({
       className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
     >
       <option value="english">English</option>
-      <option value="bengali">বাংলা</option>
+      <option value="kannada">ಕನ್ನಡ</option>
     </select>
   );
 }

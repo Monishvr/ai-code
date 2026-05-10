@@ -3,17 +3,17 @@ import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 
 const metadataDescription =
-  "AI Code Explainer by Shihab Labs — Founder & Full-Stack Developer at Shihablabs. Translate complex Python, Node.js, Express.js, JavaScript, TypeScript, React, Next.js, Shopify Liquid, HTML5, CSS3, Git, MongoDB, and PostgreSQL into friendly English or Bengali walkthroughs.";
+  "AI Code Explainer by Monish Labs — Founder & Full-Stack Developer at Monishlabs. Translate complex Python, Node.js, Express.js, JavaScript, TypeScript, React, Next.js, Shopify Liquid, HTML5, CSS3, Git, MongoDB, and PostgreSQL into friendly English or kannada walkthroughs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://aicodexp.vercel.app"),
   applicationName: "AI Code Explainer",
-  title: "AI Code Explainer | Shihab Labs",
+  title: "AI Code Explainer | Monish Labs",
   description: metadataDescription,
   keywords: [
     "AI Code Explainer",
-    "Shihab Labs",
-    "Shihablabs",
+    "Monish Labs",
+    "Monishlabs",
     "Founder & Full-Stack Developer",
     "Python",
     "Node.js",
@@ -29,25 +29,25 @@ export const metadata: Metadata = {
     "Git",
     "MongoDB",
     "PostgreSQL",
-    "Bengali code explanations",
+    "kannada code explanations",
     "code tutor",
     "developer productivity",
   ],
   category: "technology",
   authors: [
     {
-      name: "Shihab Labs",
-      url: "https://shihablabs.vercel.app/",
+      name: "Monish Labs",
+      url: "https://github.com/Monishvr/ai-code",
     },
   ],
-  creator: "Shihab Labs",
-  publisher: "Shihab Labs",
+  creator: "Monish Labs",
+  publisher: "Monish Labs",
   robots: "index, follow",
   alternates: {
     canonical: "https://aicodexp.vercel.app/",
   },
   openGraph: {
-    title: "AI Code Explainer by Shihab Labs | Bilingual Code Tutor",
+    title: "AI Code Explainer by Monish Labs | Bilingual Code Tutor",
     description: metadataDescription,
     url: "https://aicodexp.vercel.app/",
     siteName: "AI Code Explainer",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Code Explainer by Shihab Labs",
+        alt: "AI Code Explainer by Monish Labs",
       },
     ],
     locale: "en_US",
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Code Explainer | Shihab Labs",
+    title: "AI Code Explainer | Monish Labs",
     description: metadataDescription,
-    creator: "@shihablabs",
-    site: "@shihablabs",
+    creator: "@monishlabs",
+    site: "@monishlabs",
     images: ["/og-image.png"],
   },
   manifest: "/manifest.json",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   other: {
-    "author:position": "Founder & Full-Stack Developer at Shihablabs",
+    "author:position": "Founder & Full-Stack Developer at Monishlabs",
     "author:skills":
       "Python, Node.js, Express.js, JavaScript, TypeScript, React, Next.js, Shopify, Liquid, HTML5, CSS3, Git, MongoDB, PostgreSQL",
   },
@@ -103,10 +103,13 @@ const jsonLd = {
   inLanguage: ["en", "bn"],
   creator: {
     "@type": "Person",
-    name: "Shihab Labs",
+    name: "Monish Labs",
     jobTitle: "Founder & Full-Stack Developer",
-    url: "https://shihablabs.vercel.app/",
-    sameAs: ["https://shihablabs.vercel.app/"],
+    url: "https://github.com/Monishvr/ai-code",
+    sameAs: [
+      "https://monishlabs.vercel.app/",
+      "https://github.com/Monishvr/ai-code",
+    ],
     knowsAbout: [
       "Python",
       "Node.js",
@@ -131,10 +134,10 @@ const jsonLd = {
   },
   keywords: [
     "AI Code Explainer",
-    "Shihab Labs",
-    "Shihablabs",
+    "Monish Labs",
+    "Monishlabs",
     "Full-Stack Developer",
-    "Bengali code explanations",
+    "kannada code explanations",
   ],
 };
 

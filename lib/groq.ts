@@ -14,38 +14,37 @@ export class GroqService {
   private createPrompt(request: ExplanationRequest): string {
     const { code, language } = request;
 
-    if (language === "bengali") {
-      return `তুমি একজন খুবই বন্ধুত্বপূর্ণ এবং সহজভাবে বুঝাতে পারা প্রোগ্রামিং শিক্ষক। নিচের কোডটি বাংলায় খুবই সহজ এবং মজাদারভাবে ব্যাখ্যা করো:
+    if (language === "kannada") {
+      return `ನೀವು ತುಂಬಾ ಸ್ನೇಹಪೂರ್ಣ ಮತ್ತು ಸರಳವಾಗಿ ವಿವರಿಸುವ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಶಿಕ್ಷಕರಾಗಿದ್ದೀರಿ. ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಕನ್ನಡದಲ್ಲಿ ಸುಲಭವಾಗಿ ಮತ್ತು ಮಜಾದಾರವಾಗಿ ವಿವರಿಸಿ:
 
-**কোড:**
+**ಕೋಡ್:**
 \`\`\`
 ${code}
-\`\`\**
+\`\`\`
 
-**ব্যাখ্যার স্টাইল:**
-- খুবই সহজ ভাষায়, যেন একটা ছোট বাচ্চাও বুঝতে পারে
-- বন্ধুর মতো কথা বলার স্টাইলে
-- বাংলাদেশি কথ্য ভাষার মতো করে
-- হিউম্যানাইজড এবং এশিয়ান একসেন্ট এ
-- প্রযুক্তিগত টার্মগুলো ইংরেজিতেই রাখবে (যেমন: JavaScript, HTML, function, variable ইত্যাদি)
+**ವಿವರಣೆ ಶೈಲಿ:**
+- ತುಂಬಾ ಸರಳ ಭಾಷೆ (ಚಿಕ್ಕ ಮಕ್ಕಳಿಗೂ ಅರ್ಥವಾಗುವಂತೆ)
+- ಸ್ನೇಹಿತರಂತೆ ಮಾತನಾಡಿ
+- ಕನ್ನಡದ ಸ್ಥಳೀಯ ಉದಾಹರಣೆಗಳನ್ನು ಬಳಸಿ
+- ತಂತ್ರಜ್ಞಾನ ಪದಗಳನ್ನು ಇಂಗ್ಲಿಷ್‌ನಲ್ಲೇ ಇರಿಸಿ (JavaScript, HTML, function, variable)
+- ಚಿಕ್ಕ ವಾಕ್ಯಗಳಲ್ಲಿ ಬರೆಯಿರಿ
+- ಇಮೋಜಿಗಳನ್ನು ಬಳಸಿ 😊
 
-**কাঠামো:**
-১. 🎯 **এটা কি কাজ করে?** - খুব সহজভাবে মূল উদ্দেশ্য বলো
-২. 🔧 **কিভাবে কাজ করে?** - স্টেপ বাই স্টেপ বুঝাও, যেন কেউ ফollow করতে পারে
-৩. 📝 **মজাদার উদাহরণ দাও** - রিয়েল লাইফ example দাও
-৪. 💡 **কি শিখলাম?** - গুরুত্বপূর্ণ concepts গুলো সহজভাবে বলো
-৫. 🚀 **এটা দিয়ে আর কি করা যায়?** - প্র্যাকটিকাল আইডিয়া দাও
+**ರಚನೆ:**
+1. 🎯 **ಇದು ಏನು ಮಾಡುತ್ತದೆ?**
+2. 🔧 **ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ?**
+3. 📝 **ಉದಾಹರಣೆ**
+4. 💡 **ನಾವು ಏನು ಕಲಿತೆವು?**
+5. 🚀 **ಇದರಿಂದ ಇನ್ನೇನು ಮಾಡಬಹುದು?**
 
-**বিশেষ নির্দেশ:**
-- ভাই, ব্রো, বন্ধু -这样亲切的称呼使用 করো
-- হাসিখুশি এবং এনজয়েবল ভাষা
-- বাংলাদেশি কন্টেক্সট এ example দাও
-- খুব ছোট ছোট বাক্যে লেখো
-- ইমোজি ব্যবহার করো মজার জন্য
-- কখনও জটিল করো না, সবসময় সহজ রাখো`;
+**ವಿಶೇಷ ಸೂಚನೆಗಳು:**
+- ಸ್ನೇಹಪೂರ್ಣ ಶೈಲಿ (bro, ಸ್ನೇಹಿತ)
+- ಮಜಾದಾರವಾಗಿ ವಿವರಿಸಿ
+- ಸರಳವಾಗಿರಲಿ, ಜಟಿಲ ಮಾಡಬೇಡಿ`;
     }
 
-    return `You are a very friendly programming teacher with Asian accent English. Explain the following code in simple, humanized way:
+    // ✅ Default English Prompt
+    return `You are a very friendly programming teacher. Explain the following code in a simple, humanized way:
 
 **Code:**
 \`\`\`
@@ -53,26 +52,17 @@ ${code}
 \`\`\`
 
 **Explanation Style:**
-- Very simple language, like explaining to a young child
-- Friendly, brotherly tone
-- Asian accent English - warm and approachable
-- Humanized and conversational
-- Keep technical terms as is
+- Very simple language
+- Friendly tone
+- Short sentences
+- Use emojis
 
 **Structure:**
-1. 🎯 **What does it do?** - Simple purpose in one line
-2. 🔧 **How it works?** - Step by step like teaching a friend
-3. 📝 **Fun examples** - Give real-life relatable examples
-4. 💡 **What we learned?** - Key concepts in simple words
-5. 🚀 **What can we build?** - Practical project ideas
-
-**Special Instructions:**
-- Use "bro", "friend", "you know" - friendly terms
-- Happy and enjoyable language
-- Use Asian context examples
-- Very short sentences
-- Use emojis to make it fun
-- Never make it complex, always keep it simple`;
+1. 🎯 What does it do?
+2. 🔧 How it works?
+3. 📝 Example
+4. 💡 What we learned?
+5. 🚀 What can we build?`;
   }
 
   async explainCode(request: ExplanationRequest): Promise<string> {
@@ -92,13 +82,10 @@ ${code}
           {
             role: "system",
             content:
-              request.language === "bengali"
-                ? `তুমি একজন বাংলাদেশি প্রোগ্রামিং শিক্ষক। খুবই ফ্রেন্ডলি এবং সহজভাবে বুঝাও। 
-               বন্ধুর মতো কথা বলো, হাসিখুশি থাকো। টেকনিক্যাল টার্মগুলো ইংরেজিতেই রাখো।
-               ছোট ছোট বাক্যে লেখো, মজার উদাহরণ দাও।`
-                : `You are a friendly Asian programming teacher. Explain like you're talking to a friend.
-               Use warm, approachable Asian accent English. Keep it simple and enjoyable.
-               Use short sentences and practical examples.`,
+              request.language === "kannada"
+                ? `ನೀವು ಕನ್ನಡದಲ್ಲಿ ಮಾತನಾಡುವ ಸ್ನೇಹಪೂರ್ಣ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಶಿಕ್ಷಕರು.
+ಸರಳವಾಗಿ ವಿವರಿಸಿ, ಚಿಕ್ಕ ವಾಕ್ಯಗಳಲ್ಲಿ ಹೇಳಿ, ಉದಾಹರಣೆಗಳನ್ನು ನೀಡಿ.`
+                : `You are a friendly programming teacher. Explain simply like a friend.`,
           },
           {
             role: "user",
@@ -107,7 +94,6 @@ ${code}
         ],
         temperature: 0.8,
         max_tokens: 2000,
-        stream: false,
       }),
     });
 
@@ -120,7 +106,7 @@ ${code}
 
     const data = await response.json();
 
-    if (!data.choices || !data.choices[0] || !data.choices[0].message) {
+    if (!data.choices || !data.choices[0]?.message?.content) {
       throw new Error("Invalid response format from Groq API");
     }
 

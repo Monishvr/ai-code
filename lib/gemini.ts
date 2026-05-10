@@ -25,7 +25,7 @@ export class GeminiService {
 
     const languageMap = {
       english: "English",
-      bengali: "Bengali",
+      kannada: "kannada",
     };
 
     const examplesText = includeExamples

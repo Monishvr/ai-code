@@ -17,7 +17,7 @@ export default function Home() {
   const [code, setCode] = useState("");
   const [explanation, setExplanation] = useState("");
   const [loading, setLoading] = useState(false);
-  const [language, setLanguage] = useState<"english" | "bengali">("english");
+  const [language, setLanguage] = useState<"english" | "kannada">("english");
   const [explanationStyle, setExplanationStyle] = useState<
     "detailed" | "concise" | "beginner"
   >("beginner");
@@ -145,17 +145,26 @@ export default function Home() {
               AI Code Explainer
             </h1>
             <p className="text-muted-foreground mt-2">
-              Get code explanations in simple, friendly English or Bengali
+              Get code explanations in simple, friendly English or kannada
             </p>
             <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
               <span>By</span>
               <a
-                href="https://shihablabs.vercel.app/"
+                href="https://monishlabs.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                Shihab Labs
+                Monish Labs
+              </a>
+              <span>•</span>
+              <a
+                href="https://github.com/Monishvr/ai-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:underline"
+              >
+                GitHub
               </a>
             </div>
           </div>
@@ -236,7 +245,7 @@ export default function Home() {
           onIncludeExamplesChange={setIncludeExamples}
           language={language}
           onLanguageChange={(language: string) =>
-            setLanguage(language as "english" | "bengali")
+            setLanguage(language as "english" | "kannada")
           }
         />
 
@@ -372,13 +381,25 @@ export default function Home() {
           <p>
             Built with ❤️ by{" "}
             <a
-              href="https://shihablabs.vercel.app/"
+              href="https://monishlabs.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline"
             >
-              Shihab Labs
-            </a>{" "}
+              Monish Labs
+            </a>
+            {" "}
+            •
+            {" "}
+            <a
+              href="https://github.com/Monishvr/ai-code"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              GitHub
+            </a>
+            {" "}
             • Next.js • TypeScript • Tailwind CSS • Shadcn/ui
           </p>
         </div>

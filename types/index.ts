@@ -1,6 +1,6 @@
 export interface ExplanationRequest {
   code: string;
-  language: "english" | "bengali";
+  language: "english" | "kannada";
   explanationStyle: "detailed" | "concise" | "beginner";
   includeExamples: boolean;
   programmingLanguage: string;
